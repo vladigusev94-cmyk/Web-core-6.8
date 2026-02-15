@@ -26,31 +26,55 @@
 }
 
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
- background-color: whitesmok;
- max-width: 1400p;
  
- border: 1px solid gray;
+ max-width: 320px;
+ max-height: 597px;
+ box-sizing: border-box;
+ background-color: whitesmoke;
+ 
+ 
 
  
 }
+
+
+
 
 header {
 
     background-color: white;
-      
+    display: flex;
+    width: 320px; 
+    height: 88px;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 30px;
+    overflow-x: scroll;
+
+
 }
 
-h1 {
-    width: 350px;
-    height: 40px;
-    margin: 30px;
-    margin-left: 5px;
-    border-left: rgba(65,246,215,1);
-    padding-left: 5px;
+
+
+
+.title {
     font-family: TT Lakes;
     font-weight: 700;
+    width: 304px;
+    height: 40px;
+    font-size: 24px;
+    margin: 5px;
 }
+
 
 
 
@@ -61,52 +85,104 @@ h1 {
 
 .slide-menu {
     display: flex;
-    
-    grid-template-columns: 1;
-    color: black;
     gap: 35px;
     margin: 10px;
-    overflow-y: scroll;
+    overflow-y: scroll; 
+    outline: none;  
     
 }
 
+button:focus {
+  border-color: skyblue;
+  outline: none;
+}
 
-button {
-    border: 1px solid skyblue;
-    text-align: center;
-    border-radius: 5px;
+
+
+
+
+
+.button1 {
     width: 246px;
     height: 40px;
-    overflow-y: scroll;
-
-    
+   
 }
 
+span {
+    width: 220px;
+    height: 24px;
+}
+
+
+.button2 {
+    width: 258px;
+    height: 40px;
+}
+
+
+.button3 {
+    width: 143px;
+    height: 40px;
+}
+
+.button4 {
+    width: 172px;
+    height: 40px;
+}
+    
+
+button {
+    background-color: white;
+    font-family: TT Lakes;
+    font-weight: 500;
+    box-sizing: border-box;
+    outline: none;
+}
 
 
 .container {
     display: flex;
+   grid-template-columns: 1fr 1fr;
     flex-wrap: wrap;
+    width: 320px;
+    height: 322px;
+   
     padding-top: 5px;
   
 }
 
 .left-content {
-    width: 50%;
-    margin: 15px;
+   width: 280px;
+   height: 90px;
     font-family: TT Lakes;
     font-weight: 400;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+    overflow-x: scroll;
+    margin: 16px;
 
 }
+
+
    
 .right-picture {
-margin: 22px;
+box-sizing: border-box;
 }
 
 
 @media(max-width:320px) 
-.slide-menu, .container{
+.container {
     grid-template-columns: 
     repeat(, 1fr);
 
-   
+}
+
+
+@media(max-width:320px)
+header {
+    display: flex;
+    flex-wrap: wrap;
+    
+}   
+
