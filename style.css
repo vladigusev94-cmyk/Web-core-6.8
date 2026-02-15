@@ -89,6 +89,7 @@ header {
     margin: 10px;
     overflow-y: scroll; 
     outline: none;  
+    align-items: center;
     
 }
 
