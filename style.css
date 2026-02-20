@@ -1,11 +1,14 @@
 
+
+
 @font-face {
     font-family: TT Lakes;
-    src: url(fonts/TTLakes-Bold.woff) format('woff');
-    font-weight: 700;
-    font-style: normal;
+    src: url(fonts/TTLakes-Regular.woff) format('woff');
+    font-weight: 400;
+     font-style: normal;
     font-display: wrap;
 }
+
 
 
 @font-face {
@@ -20,28 +23,29 @@
 
 @font-face {
     font-family: TT Lakes;
-    src: url(fonts/TTLakes-Regular.woff) format('woff');
-    font-weight: 400;
-     font-style: normal;
+    src: url(fonts/TTLakes-Bold.woff) format('woff');
+    font-weight: 700;
+    font-style: normal;
     font-display: wrap;
 }
 
 
 
 
-
-
-
-*, *::before, *::after {
+*, 
+*::before,
+*::after {
     box-sizing: border-box;
 }
+
+
 
 body {
 
     margin: 0;
     padding: 0;
     font-family: TT Lakes;
-    background-color: white;
+    background-color: gainsboro;
 
  
 }
@@ -99,32 +103,6 @@ h1 {
 
 
 
-
-.read-more {
-    font-weight: 400;
-    font-size: 14px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-    flex-direction: row-reverse;
-    
-}
-
-
-
-.read-more__btn:hover{
-    color: skyblue;
-   
-}
-.arrow {
-    width: 50px;
-    height: 50px;
-    color: aqua;
-    margin-left: 5px;
-    vertical-align: middle;
-} 
-
-
 .services {
     
     font-weight: 500;
@@ -142,38 +120,16 @@ h1 {
 
 .services::-webkit-scrollbar {
     display: none;
-}
-
-button:focus {
-  border: 1px solid skyblue;
-  outline: none; 
-}
-
-
-.services {
-    position: relative;
-
-}
-
-.services::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 100%;
-    background: linear-gradient(to left, whitesmoke, transparent);
-    pointer-events: none;
-}
-
-
     
+}
+
+
 
 .services button {
 
      appearance: none;
 --webkit-appearance: none;
-   display: flex;
+    display: flex;
     height: 40px;
 
     justify-content: center;
@@ -201,21 +157,51 @@ button:focus {
  .services button:first-child {
     background: white;
     border: 1px solid aqua;
-    color: #1B1C21;
+    
 }
 
 
 
-.services button:hover {
+.services button:hover{
     background: white;
     border: 2px solid aqua;
-    color: #1B1C21;
+   
 }
 
 
 .services button:active {
-    transform: scale(0.97);
+    box-shadow: none;
+    outline: none;
+    background: inherit;
+    transform: scale(0.80);
 }
+
+
+
+
+button:focus {
+  outline: none; 
+  box-shadow: none;
+}
+
+
+.services {
+    position: relative;
+
+}
+
+.services::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 100%;   
+    pointer-events: none;
+}
+
+
+    
 
 
 .container {
@@ -245,6 +231,37 @@ button:focus {
     align-items: center;
     padding: 15px;
 }
+
+
+
+
+
+.read-more {
+    font-weight: 400;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    flex-direction: row-reverse;
+    
+}
+
+
+
+.read-more__btn:hover{
+    color: skyblue;
+   
+}
+.arrow {
+    width: 50px;
+    height: 50px;
+    color: aqua;
+    margin-left: 5px;
+    vertical-align: middle;
+} 
+
+
+
 
 
     
@@ -303,3 +320,4 @@ button:focus {
     display: block;
     border-radius: 5px;
 }
+
