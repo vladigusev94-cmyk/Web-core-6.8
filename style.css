@@ -6,7 +6,7 @@
     src: url(fonts/TTLakes-Regular.woff) format('woff');
     font-weight: 400;
      font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 
@@ -16,7 +16,7 @@
     src: url(fonts/TTLakes-Medium.woff) format('woff');
     font-weight: 500;
      font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 
@@ -26,7 +26,7 @@
     src: url(fonts/TTLakes-Bold.woff) format('woff');
     font-weight: 700;
     font-style: normal;
-    font-display: wrap;
+    font-display: swap;
 }
 
 
@@ -43,7 +43,6 @@
 body {
 
     margin: 0;
-    padding: 0;
     font-family: TT Lakes;
     background-color: gainsboro;
 
@@ -58,7 +57,6 @@ body {
 .page {
      max-width: 1120px;
      margin: 0 auto;
-     padding: 0px;
      background-color: whitesmoke;
      min-height: 535px;
 
@@ -76,7 +74,6 @@ img {
 header {
     display: flex;
     background-color: white;
-    box-sizing: border-box;
     max-height: 88px;
     padding: 10px;
     gap: 16px; 
@@ -95,7 +92,7 @@ h1 {
    
     font-weight: 700;
     font-size: 24px;
-    margin-left: 15px;
+    padding-left: 15px;
     border-left: 5px solid aqua;
     
 }
@@ -114,7 +111,7 @@ h1 {
     overflow-x: auto;
     scrollbar-width: none;
     align-items: center;
-    justify-content: center;
+ 
 }
 
 
@@ -128,14 +125,11 @@ h1 {
 .services button {
 
      appearance: none;
---webkit-appearance: none;
-    display: flex;
+-webkit-appearance: none;
+    
     height: 40px;
-
-    justify-content: center;
     padding: 0px 18px;
     border: 1px solid whitesmoke;
-    align-items: center;
     font-size: 14px;
     border-radius: 6px;
     background: whitesmoke;
@@ -145,7 +139,6 @@ h1 {
     cursor: pointer;
     transition: 0.2s;
     outline: none;
-    line-height: 1;
     font: inherit;
 }
  
@@ -173,15 +166,15 @@ h1 {
     box-shadow: none;
     outline: none;
     background: inherit;
-    transform: scale(0.80);
+
 }
 
 
 
 
-button:focus {
+ .services button:focus-visible{
   outline: none; 
-  box-shadow: none;
+  
 }
 
 
@@ -190,18 +183,6 @@ button:focus {
 
 }
 
-.services::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 100%;   
-    pointer-events: none;
-}
-
-
-    
 
 
 .container {
@@ -217,7 +198,6 @@ button:focus {
     max-width: 50%;
     padding: 15px;
     font-weight: 400;
-    box-sizing: border-box;
     font-size: 14px;
     line-height: 20px;
    
@@ -242,7 +222,7 @@ button:focus {
     text-decoration: none;
     margin-top: 10px;
     display: inline-block;
-    flex-direction: row-reverse;
+    
     
 }
 
@@ -252,16 +232,16 @@ button:focus {
     color: skyblue;
    
 }
-.arrow {
-    width: 50px;
-    height: 50px;
-    color: aqua;
-    margin-left: 5px;
-    vertical-align: middle;
-} 
+   
+.read-more__btn::after {
+    color: skyblue;
+    content: " "; 
+}
 
-
-
+.right-picture img {
+   
+    border-radius: 5px;
+}
 
 
     
@@ -314,10 +294,4 @@ button:focus {
 }
 
 
-.right-picture img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 5px;
-}
 
