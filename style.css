@@ -63,6 +63,10 @@ body {
 
 }
 
+
+
+
+
 img {
     display: block;
     max-width: 100%;
@@ -74,13 +78,48 @@ img {
 header {
     display: flex;
     background-color: white;
+    justify-content: space-between;
     max-height: 88px;
     padding: 10px;
     gap: 16px; 
     align-items: center;
     overflow-x: auto;
+    position: relative;
 
 }
+
+
+
+.header__left,
+.header__center,
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.group {
+    margin-left: 16px;
+}
+
+
+header button {
+    background: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.8s;
+    box-shadow: 0 6px 0 white;
+}
+
+header button:active {
+    transform: translateY(4px);
+        box-shadow: 0 0 0 white;
+}
+
+
+
+ 
 
 
 
@@ -267,6 +306,17 @@ h1 {
         padding: 0 16px;
         display: flex;
         align-items: center;
+
+    }
+
+
+    .group {
+       
+        position: absolute;
+        width: 75PX;
+        height: 50px;
+        bottom: 12.5%;
+        
     }
 
 
@@ -295,3 +345,23 @@ h1 {
 
 
 
+@media (max-width: 767px) {
+    .header__center {
+        display: none;
+    }
+
+    header {
+        position: relative;
+    }
+
+
+    .group {
+        position: absolute;
+        left: 28%;
+        bottom: 14%;
+        margin: 0;
+    }
+
+    .header__right {
+        margin-left: auto;
+    }
